@@ -1,0 +1,27 @@
+name: Deploy website
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    run-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v4
+      - name: install dependencies
+        run: npm ci
+      - name: Lint code
+        run: npm run lint
+      - name: Test code
+        run: npm run test
+  build:
+    needs: test
+    run-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v4
+      - name: install dependencies
+        run: npm ci
+      
+  
