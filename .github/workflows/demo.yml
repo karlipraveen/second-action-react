@@ -14,6 +14,10 @@ jobs:
         run: echo "Hello World!!!"
       - name: Print goodbye
         run: echo "Done - bye!!!"
+      - name: Multi-Line Shell commands
+        run: |
+           echo "First output"
+           echo "Second output"
   test:
     needs: first-job
     runs-on: ubuntu-latest
