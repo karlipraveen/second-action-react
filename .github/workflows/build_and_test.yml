@@ -1,8 +1,9 @@
 name: Deploy website
-on: push
-      paths-ignore:
-        - 'docs/**'
-        - README.md
+on: 
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - README.md
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
