@@ -1,4 +1,4 @@
-name: Deploy website
+name: Build & Test website
 on: 
   push:
     paths-ignore:
