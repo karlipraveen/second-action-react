@@ -80,7 +80,7 @@ jobs:
       - name: Output contents
         run: ls
       - name: Output filename
-        run: echo "${{ needs }}"
+        run: echo "${{ needs.build }}"
       - name: Deploy
         run: echo "Deploying..."
       
